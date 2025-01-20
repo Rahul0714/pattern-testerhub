@@ -1,5 +1,4 @@
 import { UserCircle, Building2, ArrowRight } from "lucide-react";
-
 export const WelcomeScreen = () => {
   const handleRoleSelect = (role) => {
     console.log(`Selected role: ${role}`);
