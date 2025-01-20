@@ -1,4 +1,5 @@
 import { UserCircle, Building2, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 export const WelcomeScreen = () => {
   const handleRoleSelect = (role) => {
     console.log(`Selected role: ${role}`);
@@ -25,7 +26,7 @@ export const WelcomeScreen = () => {
 
           <div className="grid md:grid-cols-2 gap-8 px-4">
             <button
-              onClick={() => handleRoleSelect("seeker")}
+              onClick={() => handleRoleSelect("tester")}
               className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -37,22 +38,24 @@ export const WelcomeScreen = () => {
                   I am a Tester
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Discover exciting opportunities and take the next step in your
-                  career journey. Access thousands of job listings tailored to
-                  your skills.
+                  Explore creative opportunities and elevate your crochet
+                  journey. Apply now to access exclusive crochet patterns
+                  tailored for testing and showcase your skills!
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold group-hover:gap-2 transition-all">
-                  Get Started
-                  <ArrowRight
-                    size={20}
-                    className="ml-2 invisible group-hover:visible transition-all"
-                  />
-                </div>
+                <Link to="/signup">
+                  <div className="flex items-center text-purple-600 font-semibold group-hover:gap-2 transition-all">
+                    Get Started
+                    <ArrowRight
+                      size={20}
+                      className="ml-2 invisible group-hover:visible transition-all"
+                    />
+                  </div>
+                </Link>
               </div>
             </button>
 
             <button
-              onClick={() => handleRoleSelect("employer")}
+              onClick={() => handleRoleSelect("creator")}
               className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -64,31 +67,21 @@ export const WelcomeScreen = () => {
                   I am a Creator
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Find the perfect candidates for your organization. Post jobs,
-                  review applications, and build your dream team efficiently.
+                  Unleash your creativity and share your unique designs with the
+                  world. Apply now to connect with skilled testers and bring
+                  your crochet patterns to life!
                 </p>
-                <div className="flex items-center text-purple-600 font-semibold group-hover:gap-2 transition-all">
-                  Get Started
-                  <ArrowRight
-                    size={20}
-                    className="ml-2 invisible group-hover:visible transition-all"
-                  />
-                </div>
+                <Link to="/signup">
+                  <div className="flex items-center text-purple-600 font-semibold group-hover:gap-2 transition-all">
+                    Get Started
+                    <ArrowRight
+                      size={20}
+                      className="ml-2 invisible group-hover:visible transition-all"
+                    />
+                  </div>
+                </Link>
               </div>
             </button>
-          </div>
-
-          <div className="mt-12 text-center text-sm text-gray-500">
-            <p>
-              By continuing, you agree to our{" "}
-              <a href="#" className="text-blue-600 hover:underline">
-                Terms of Service
-              </a>{" "}
-              and{" "}
-              <a href="#" className="text-blue-600 hover:underline">
-                Privacy Policy
-              </a>
-            </p>
           </div>
         </div>
       </div>

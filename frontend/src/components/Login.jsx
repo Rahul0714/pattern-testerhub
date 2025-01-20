@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Mail, Lock, Eye, EyeOff, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Mail, Lock, Eye, EyeOff, ArrowRight, Link2 } from "lucide-react";
 
 export const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -99,19 +100,20 @@ export const Login = () => {
                 </a>
               </div>
 
-              {/* Login Button */}
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              >
-                Login
-              </button>
+              <Link to="/home">
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                >
+                  Login
+                </button>
+              </Link>
             </form>
 
             <div className="mt-8 text-center">
               <span className="text-gray-600">Do not have an account?</span>
-              <a
-                href="#"
+              <Link
+                to="/signup"
                 className="text-blue-600 font-semibold ml-2 hover:underline inline-flex items-center group"
               >
                 Sign up
@@ -119,22 +121,8 @@ export const Login = () => {
                   size={16}
                   className="ml-1 transform group-hover:translate-x-1 transition-transform"
                 />
-              </a>
+              </Link>
             </div>
-          </div>
-
-          {/* Footer */}
-          <div className="mt-8 text-center text-sm text-gray-500">
-            <p>
-              By continuing, you agree to our{" "}
-              <a href="#" className="text-blue-600 hover:underline">
-                Terms of Service
-              </a>{" "}
-              and{" "}
-              <a href="#" className="text-blue-600 hover:underline">
-                Privacy Policy
-              </a>
-            </p>
           </div>
         </div>
       </div>

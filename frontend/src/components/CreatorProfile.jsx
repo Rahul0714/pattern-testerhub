@@ -12,58 +12,50 @@ import {
 
 export const CreatorProfile = () => {
   const profile = {
-    companyName: "TechCorp Solutions",
-    industry: "Information Technology",
-    size: "500-1000 employees",
+    companyName: "StitchCraft Designs",
+    size: "500-1000 patterns",
     founded: "2010",
-    location: "San Francisco, CA",
-    website: "www.techcorpsolutions.com",
-    email: "careers@techcorpsolutions.com",
-    phone: "(555) 987-6543",
+    location: "Mumbai",
+    website: "www.stitchcraft.com",
+    email: "careers@stitchcraft.com",
+    phone: "9999999999",
     about:
-      "TechCorp Solutions is a leading technology company specializing in enterprise software solutions. We're committed to innovation and creating a dynamic work environment where talent thrives.",
+      "StitchCraft Designs is a boutique design company specializing in the creation of innovative, stylish, and high-quality crochet patterns and products. Our mission is to blend creativity with craftsmanship, offering a wide range of crochet designs that appeal to crafters, fashion enthusiasts, and home decorators alike.",
     openPositions: [
       {
-        title: "Senior Full Stack Developer",
-        department: "Engineering",
-        type: "Full-time",
-        location: "San Francisco, CA",
+        title: "Crocheter",
+        department: "Design",
+        location: "Mumbai",
         posted: "2 days ago",
       },
       {
-        title: "Product Manager",
-        department: "Product",
-        type: "Full-time",
+        title: "Craft Instructor",
+        department: "Design",
         location: "Remote",
         posted: "1 week ago",
       },
       {
-        title: "UX Designer",
+        title: "Amigurumi Artist",
         department: "Design",
-        type: "Contract",
-        location: "Hybrid",
+        location: "Pune",
         posted: "3 days ago",
       },
     ],
     benefits: [
-      "Competitive salary",
-      "Health, dental, and vision insurance",
-      "401(k) matching",
+      "Competitive Pay",
+      // "Health, dental, and vision insurance",
+      // "401(k) matching",
       "Unlimited PTO",
       "Remote work options",
       "Professional development budget",
     ],
     companyStats: [
-      { label: "Founded", value: "2010" },
+      { label: "Started", value: "2023" },
       { label: "Employees", value: "750+" },
       { label: "Offices", value: "5" },
       { label: "Countries", value: "3" },
     ],
-    awards: [
-      "Best Places to Work 2024",
-      "Innovation Award 2023",
-      "Top Tech Employer 2023",
-    ],
+    awards: ["Innovation Award 2023"],
   };
 
   return (
@@ -85,23 +77,11 @@ export const CreatorProfile = () => {
                   <Globe className="w-4 h-4" /> {profile.website}
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-2">
-                  <Users className="w-4 h-4" /> {profile.size}
+                  <Briefcase className="w-4 h-4" /> {profile.size}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {profile.companyStats.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md p-4 text-center"
-            >
-              <div className="text-2xl font-bold">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
-            </div>
-          ))}
         </div>
 
         <div className="bg-white rounded-lg shadow-md p-6">
@@ -136,20 +116,8 @@ export const CreatorProfile = () => {
         </div>
 
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-bold mb-4">Benefits & Perks</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {profile.benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span>{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-md p-6">
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-            <Trophy className="w-5 h-5" /> Awards & Recognition
+            <Trophy className="w-5 h-5" /> Achievements
           </h2>
           <div className="space-y-2">
             {profile.awards.map((award, index) => (

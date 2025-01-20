@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Mail,
   Lock,
@@ -61,7 +62,7 @@ export const SignUp = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <button
                     type="button"
-                    onClick={() => setUserType("seeker")}
+                    onClick={() => setUserType("tester")}
                     className={`p-4 rounded-lg border flex flex-col items-center gap-2 transition-all ${
                       userType === "seeker"
                         ? "border-blue-500 bg-blue-50 text-blue-700"
@@ -80,7 +81,7 @@ export const SignUp = () => {
                   </button>
                   <button
                     type="button"
-                    onClick={() => setUserType("employer")}
+                    onClick={() => setUserType("creator")}
                     className={`p-4 rounded-lg border flex flex-col items-center gap-2 transition-all ${
                       userType === "employer"
                         ? "border-purple-500 bg-purple-50 text-purple-700"
@@ -100,7 +101,6 @@ export const SignUp = () => {
                 </div>
               </div>
 
-              {/* Full Name Field */}
               <div className="mb-6">
                 <label className="block text-gray-700 text-sm font-medium mb-2">
                   Full Name
@@ -119,7 +119,6 @@ export const SignUp = () => {
                 </div>
               </div>
 
-              {/* Email Field */}
               <div className="mb-6">
                 <label className="block text-gray-700 text-sm font-medium mb-2">
                   Email Address
@@ -138,7 +137,6 @@ export const SignUp = () => {
                 </div>
               </div>
 
-              {/* Password Field */}
               <div className="mb-6">
                 <label className="block text-gray-700 text-sm font-medium mb-2">
                   Password
@@ -164,7 +162,6 @@ export const SignUp = () => {
                 </div>
               </div>
 
-              {/* Confirm Password Field */}
               <div className="mb-6">
                 <label className="block text-gray-700 text-sm font-medium mb-2">
                   Confirm Password
@@ -194,20 +191,20 @@ export const SignUp = () => {
                 </div>
               </div>
 
-              {/* Sign Up Button */}
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              >
-                Create Account
-              </button>
+              <Link to="/home">
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                >
+                  Create Account
+                </button>
+              </Link>
             </form>
 
-            {/* Login Link */}
             <div className="mt-8 text-center">
               <span className="text-gray-600">Already have an account?</span>
-              <a
-                href="#"
+              <Link
+                to="/login"
                 className="text-blue-600 font-semibold ml-2 hover:underline inline-flex items-center group"
               >
                 Login
@@ -215,22 +212,8 @@ export const SignUp = () => {
                   size={16}
                   className="ml-1 transform group-hover:translate-x-1 transition-transform"
                 />
-              </a>
+              </Link>
             </div>
-          </div>
-
-          {/* Footer */}
-          <div className="mt-8 text-center text-sm text-gray-500">
-            <p>
-              By signing up, you agree to our{" "}
-              <a href="#" className="text-blue-600 hover:underline">
-                Terms of Service
-              </a>{" "}
-              and{" "}
-              <a href="#" className="text-blue-600 hover:underline">
-                Privacy Policy
-              </a>
-            </p>
           </div>
         </div>
       </div>

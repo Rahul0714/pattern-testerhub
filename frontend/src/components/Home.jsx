@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Search,
   MapPin,
-  Briefcase,
   Clock,
   ChevronRight,
   ChevronLeft,
@@ -16,6 +15,7 @@ import {
   MessageSquare,
   Bookmark,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -33,51 +33,46 @@ export const Home = () => {
 
   const trendingJobs = [
     {
-      title: "Senior React Developer",
-      company: "TechCorp Inc.",
-      location: "San Francisco, CA",
-      type: "Full-time",
-      salary: "$120k - $150k",
+      title: "Crocheter",
+      company: "XYZ",
+      location: "Mumbai",
+      salary: "₹12k - ₹15k",
       postedTime: "2 hours ago",
       applicants: 43,
       logo: "https://api.dicebear.com/7.x/initials/svg?seed=TC",
     },
     {
-      title: "Product Manager",
-      company: "InnovateLabs",
-      location: "New York, NY",
-      type: "Full-time",
-      salary: "$130k - $160k",
+      title: "Pattern Writer",
+      company: "ABC",
+      location: "Pune",
+      salary: "₹13k - ₹16k",
       postedTime: "5 hours ago",
       applicants: 27,
       logo: "https://api.dicebear.com/7.x/initials/svg?seed=IL",
     },
     {
-      title: "UI/UX Designer",
+      title: "Craft Instructor",
       company: "DesignMasters",
       location: "Remote",
-      type: "Contract",
-      salary: "$80k - $100k",
+      salary: "₹8k - ₹10k",
       postedTime: "1 day ago",
       applicants: 65,
       logo: "https://api.dicebear.com/7.x/initials/svg?seed=DM",
     },
     {
-      title: "Data Scientist",
-      company: "DataFlow Analytics",
-      location: "Boston, MA",
-      type: "Full-time",
-      salary: "$140k - $180k",
+      title: "Amigurumi Artist",
+      company: "StitchCraft ",
+      location: "Delhi",
+      salary: "₹14k - ₹18k",
       postedTime: "3 days ago",
       applicants: 89,
       logo: "https://api.dicebear.com/7.x/initials/svg?seed=DA",
     },
     {
-      title: "DevOps Engineer",
+      title: "Fasion Designer",
       company: "CloudScale",
-      location: "Seattle, WA",
-      type: "Full-time",
-      salary: "$125k - $155k",
+      location: "Mumbai",
+      salary: "₹12k - ₹15k",
       postedTime: "4 days ago",
       applicants: 34,
       logo: "https://api.dicebear.com/7.x/initials/svg?seed=CS",
@@ -86,25 +81,25 @@ export const Home = () => {
 
   const featuredCompanies = [
     {
-      name: "Google",
+      name: "ABC",
       jobs: 156,
       rating: 4.8,
       logo: "https://api.dicebear.com/7.x/initials/svg?seed=G",
     },
     {
-      name: "Microsoft",
+      name: "XYZ",
       jobs: 132,
       rating: 4.7,
       logo: "https://api.dicebear.com/7.x/initials/svg?seed=M",
     },
     {
-      name: "Apple",
+      name: "CloudScale",
       jobs: 98,
       rating: 4.9,
       logo: "https://api.dicebear.com/7.x/initials/svg?seed=A",
     },
     {
-      name: "Amazon",
+      name: "DesignMasters",
       jobs: 245,
       rating: 4.6,
       logo: "https://api.dicebear.com/7.x/initials/svg?seed=AZ",
@@ -163,13 +158,13 @@ export const Home = () => {
                       </p>
                     </div>
                     <div className="py-1">
-                      <a
-                        href="#"
+                      <Link
+                        to="/testerProfile"
                         className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         <User size={16} />
                         View Profile
-                      </a>
+                      </Link>
                       <a
                         href="#"
                         className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -211,7 +206,7 @@ export const Home = () => {
               <div className="relative flex-1">
                 <input
                   type="text"
-                  placeholder="Job title or keyword"
+                  placeholder="Pattern title or keyword"
                   className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 focus:outline-none"
                 />
                 <Search className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
@@ -219,7 +214,7 @@ export const Home = () => {
               <div className="relative flex-1">
                 <input
                   type="text"
-                  placeholder="Location"
+                  placeholder="Location or Online Availability"
                   className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 focus:outline-none"
                 />
                 <MapPin className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
@@ -297,10 +292,10 @@ export const Home = () => {
                         <MapPin size={16} />
                         {job.location}
                       </span>
-                      <span className="flex items-center gap-1">
+                      {/* <span className="flex items-center gap-1">
                         <Briefcase size={16} />
                         {job.type}
-                      </span>
+                      </span> */}
                       <span className="flex items-center gap-1">
                         <Clock size={16} />
                         {job.postedTime}
@@ -326,7 +321,7 @@ export const Home = () => {
         <div>
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-gray-900">
-              Featured Companies
+              Featured Creator
             </h2>
             <a
               href="#"
@@ -355,7 +350,7 @@ export const Home = () => {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
                   <Users size={16} />
-                  <span>{company.jobs} jobs opening</span>
+                  <span>{company.jobs} positions available</span>
                 </div>
               </div>
             ))}

@@ -10,49 +10,41 @@ import {
 
 export const TesterProfile = () => {
   const profile = {
-    name: "Sarah Johnson",
-    title: "Senior Software Developer",
-    location: "San Francisco, CA",
-    email: "sarah.j@example.com",
-    phone: "(555) 123-4567",
+    name: "John Doe",
+    title: "Senior Crocheter",
+    location: "Mumbai",
+    email: "john.d@example.com",
+    phone: "999999999",
     about:
-      "Passionate software developer with 5+ years of experience in full-stack development. Specialized in React, Node.js, and cloud technologies.",
+      "Passionate crocheter with 5+ years of experience in design and crafting. Specialized in Amigurumi.",
     experience: [
       {
-        company: "Tech Solutions Inc.",
-        role: "Senior Software Developer",
+        company: "Design Maters",
+        role: "Senior Crocheter",
         period: "2020 - Present",
-        description:
-          "Lead developer for enterprise web applications, managing team of 5 developers",
       },
       {
-        company: "StartupCo",
-        role: "Software Developer",
+        company: "ABC",
+        role: "Craft Instructor",
         period: "2018 - 2020",
-        description: "Full-stack development using React and Node.js",
       },
     ],
     education: [
       {
-        school: "University of Technology",
-        degree: "Master's in Computer Science",
+        degree: "Professional Certificate in Amigurumi",
         year: "2018",
       },
       {
-        school: "State University",
-        degree: "Bachelor's in Software Engineering",
+        degree: "Certification in Home Decor",
         year: "2016",
       },
     ],
     skills: [
-      "React",
-      "Node.js",
-      "Python",
-      "AWS",
-      "Docker",
-      "GraphQL",
-      "TypeScript",
-      "Agile",
+      "Amigurumi",
+      "Home Decor",
+      "Garments",
+      "Accessories",
+      "Kitchen and Dining",
     ],
   };
 
